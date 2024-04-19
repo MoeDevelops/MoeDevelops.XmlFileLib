@@ -24,4 +24,4 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
-          path: /home/runner/work/MoeDevelops.XmlFileLib/bin/Debug/*.nupkg
+          path: MoeDevelops.XmlFileLib/bin/Debug/MoeDevelops.XmlFileLib.1.0.0.nupkg
