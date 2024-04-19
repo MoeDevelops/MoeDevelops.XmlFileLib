@@ -2,7 +2,8 @@ name: Release
 
 on:
   release:
-    branches: ["master"]
+    types:
+      - published
 
 jobs:
   build:
@@ -23,4 +24,4 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
-          path: MoeDevelops.XmlFileLib/bin/Debug/MoeDevelops.XmlFileLib.*.nupkg
+          path: MoeDevelops.XmlFileLib/bin/Debug/*.nupkg
