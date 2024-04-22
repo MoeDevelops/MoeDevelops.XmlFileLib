@@ -6,21 +6,15 @@ on:
       - published
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+      - name: Release
+        uses: brandedoutcast/publish-nuget@v2
         with:
-          dotnet-version: 6.0.x
-      - name: Restore dependencies
-        run: dotnet restore
-      - name: Build
-        run: dotnet build --no-restore
-      - name: Pack
-        run: dotnet pack
+          PROJECT_FILE_PATH: MoeDevelops.XmlFileLib/MoeDevelops.XmlFileLib.csproj
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
